@@ -1,0 +1,27 @@
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.rating-sm { font-size: 0.75rem; }
+.rating-lg { font-size: 1.1rem; }
+.rating-star {
+  color: var(--text-dim);
+}
+.rating-star.is-full {
+  color: var(--accent);
+}
+.rating-value {
+  color: var(--text);
+  font-weight: 700;
+  margin-left: 0.4rem;
+  font-size: 0.85em;
+}
+.rating-count {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  margin-left: 0.2rem;
+}

@@ -1,0 +1,164 @@
+/* ============================================================
+   ENTREPRENEUR DASHBOARD — seller console page styles
+   Dark editorial. Lime only for accents. radius <= 4px.
+   ============================================================ */
+
+.section-head-ish {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.section-head-ish .section-label {
+  margin: 0;
+}
+
+/* ---------- Form grids ---------- */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 0 var(--space-4);
+}
+
+.form-grid .field-span {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Modal form actions ---------- */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  flex-wrap: wrap;
+}
+
+/* ---------- Table cell atoms ---------- */
+
+.cell-actions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  white-space: nowrap;
+}
+
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.link-btn:hover {
+  color: var(--accent);
+}
+
+.link-btn.is-danger:hover {
+  color: var(--danger);
+}
+
+.cell-product {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cell-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.stock-flag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+  border: 1px solid rgba(255, 193, 77, 0.5);
+  border-radius: var(--radius-sm);
+  padding: 0.2rem 0.55rem;
+}
+
+.stock-flag.is-out {
+  color: var(--danger);
+  border-color: rgba(255, 93, 93, 0.5);
+}
+
+.dash-row-id {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.status-select {
+  width: auto;
+  min-width: 140px;
+  padding: 0.5rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+/* ---------- Profile editor ---------- */
+
+.profile-panel {
+  max-width: 900px;
+}
+
+.profile-head {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.profile-avatar-preview {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-strong);
+  flex-shrink: 0;
+}
+
+.profile-saved {
+  margin: 0 0 var(--space-6);
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-dim);
+  border: 1px solid rgba(183, 255, 42, 0.35);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ---------- Requests ---------- */
+
+.request-row .dash-row-actions {
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .profile-head {
+    align-items: flex-start;
+  }
+
+  .status-select {
+    min-width: 0;
+    width: 100%;
+  }
+}

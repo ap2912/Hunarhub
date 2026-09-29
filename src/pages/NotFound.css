@@ -1,0 +1,14 @@
+.not-found {
+  text-align: left;
+  max-width: 900px;
+}
+.not-found-text {
+  margin: 1.5rem 0 2.5rem;
+  font-size: 1.05rem;
+  max-width: 46ch;
+}
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

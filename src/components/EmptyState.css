@@ -1,0 +1,28 @@
+.empty-state {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.5rem, 4vw, 3rem);
+  text-align: center;
+  background: var(--bg-soft);
+}
+.empty-state-index {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.empty-state.is-error .empty-state-index {
+  color: var(--danger);
+}
+.empty-state-title {
+  font-size: clamp(1.25rem, 2.4vw, 1.9rem);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+.empty-state-message {
+  color: var(--text-muted);
+  max-width: 42ch;
+  margin: 0 auto 1.75rem;
+}

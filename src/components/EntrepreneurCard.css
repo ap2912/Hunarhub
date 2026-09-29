@@ -1,0 +1,138 @@
+.maker-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.maker-card:hover {
+  border-color: var(--border-strong);
+}
+
+.maker-card-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.maker-card-media .img-cover {
+  transition: transform 300ms ease;
+}
+.maker-card:hover .maker-card-media .img-cover {
+  transform: scale(1.03);
+}
+
+.maker-card-verified {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: rgba(5, 5, 5, 0.85);
+  border: 1px solid rgba(183, 255, 42, 0.5);
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 0.35rem 0.6rem;
+  border-radius: 2px;
+}
+
+.maker-card-save {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 5, 5, 0.85);
+  border: 1px solid var(--border-strong);
+  border-radius: 2px;
+  color: var(--text);
+  font-size: 1.15rem;
+  transition: var(--transition);
+}
+.maker-card-save:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.maker-card-save.is-saved {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.maker-card-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+.maker-card-index {
+  margin: 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+.maker-card-name {
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+.maker-card-name a:hover {
+  color: var(--accent);
+}
+.maker-card-meta {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.maker-card-bio {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.maker-card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.maker-card-price {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+}
+.maker-card-cta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.maker-card-cta:hover {
+  color: var(--accent);
+}
+.maker-card-cta span {
+  display: inline-block;
+  transition: transform 180ms ease;
+}
+.maker-card-cta:hover span {
+  transform: translateX(4px);
+}

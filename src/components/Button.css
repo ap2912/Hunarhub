@@ -1,0 +1,122 @@
+/* ---------- Button system ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  padding: 1rem 1.75rem;
+  transition: var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Primary — lime */
+.btn-primary {
+  background: var(--accent);
+  color: #050505;
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+/* Secondary — outline */
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border-strong);
+}
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Ghost — text only */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: transparent;
+  padding-inline: 0.5rem;
+}
+.btn-ghost:hover {
+  color: var(--text);
+}
+
+/* Danger */
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: rgba(255, 93, 93, 0.4);
+}
+.btn-danger:hover {
+  background: rgba(255, 93, 93, 0.12);
+  border-color: var(--danger);
+}
+
+/* Sizes */
+.btn-sm {
+  padding: 0.6rem 1rem;
+  font-size: 0.7rem;
+}
+.btn-lg {
+  padding: 1.2rem 2.25rem;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Disabled */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+.btn-primary:disabled:hover {
+  background: var(--accent);
+}
+
+/* Loading */
+.btn.is-loading {
+  cursor: wait;
+  opacity: 0.85;
+}
+.btn-spinner {
+  width: 0.9em;
+  height: 0.9em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 700ms linear infinite;
+  flex: none;
+}
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Arrow nudge on hover for CTA-style buttons */
+.btn .btn-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,318 @@
+/* ---------- EntrepreneurProfile ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.ep-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.ep-media {
+  position: relative;
+}
+
+.ep-avatar {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+}
+
+.ep-verified {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.4rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.ep-category {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.ep-loc {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.ep-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.ep-dot {
+  color: var(--text-dim);
+}
+
+.ep-years {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.ep-avail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+}
+
+.ep-avail.is-on {
+  color: var(--accent);
+}
+
+.ep-avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-sm);
+  background: currentColor;
+  display: inline-block;
+}
+
+.ep-bio {
+  max-width: 60ch;
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+}
+
+.ep-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ep-chip {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.ep-ctas {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ep-section {
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* Gallery */
+.ep-gallery {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+}
+
+.ep-gallery-img {
+  flex: 0 0 auto;
+  width: min(320px, 72vw);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  scroll-snap-align: start;
+}
+
+/* Services */
+.ep-services {
+  border-top: 1px solid var(--border);
+}
+
+.ep-service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.ep-service-main {
+  min-width: 0;
+}
+
+.ep-service-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.4rem;
+}
+
+.ep-service-desc {
+  margin: 0 0 0.6rem;
+  max-width: 60ch;
+  font-size: 0.95rem;
+}
+
+.ep-service-meta {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--text);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Products */
+.ep-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Reviews */
+.ep-review {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  padding: 1.25rem 1.4rem;
+  margin-bottom: 1rem;
+  max-width: 760px;
+}
+
+.ep-review-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.ep-review-text {
+  margin: 0 0 0.6rem;
+}
+
+.ep-review-date {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.ep-review-cta {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.ep-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ep-review-form {
+  margin-top: 1.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  max-width: 640px;
+}
+
+.ep-form-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.ep-success {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem;
+}
+
+.ep-stars {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.ep-stars-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.ep-stars-row {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.ep-star {
+  cursor: pointer;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--text-dim);
+  transition: var(--transition);
+}
+
+.ep-star-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ep-star:hover,
+.ep-star:hover ~ .ep-star,
+.ep-star.is-on {
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .ep-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .ep-service-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

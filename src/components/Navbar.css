@@ -1,0 +1,209 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+.navbar.is-scrolled {
+  border-bottom-color: var(--border);
+  background: rgba(5, 5, 5, 0.95);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  height: 72px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: none;
+}
+.nav-logo-mark {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--accent);
+  position: relative;
+  flex: none;
+}
+.nav-logo-mark::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  background: var(--accent);
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+.nav-logo-sub {
+  font-size: 0.55rem;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  margin-inline: auto;
+}
+
+.navbar-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: var(--transition);
+}
+.navbar-link:hover,
+.navbar-link.is-active {
+  color: var(--text);
+}
+.navbar-link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--accent);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.navbar-cart {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.navbar-cart:hover { color: var(--text); }
+.navbar-cart-count {
+  min-width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 0.3rem;
+  background: var(--accent);
+  color: #050505;
+  font-size: 0.7rem;
+  font-weight: 800;
+  border-radius: 2px;
+}
+
+.navbar-account {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+}
+.navbar-signout {
+  cursor: pointer;
+}
+
+/* Burger */
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem;
+}
+.navbar-burger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--text);
+  transition: var(--transition);
+}
+.navbar-burger.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar-burger.is-open span:nth-child(2) { opacity: 0; }
+.navbar-burger.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile panel */
+.navbar-mobile {
+  display: none;
+  border-top: 1px solid var(--border);
+  background: #050505;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease;
+}
+.navbar-mobile.is-open {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.navbar-mobile-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem 2rem;
+}
+.navbar-mobile-link {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  background: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+.navbar-mobile-link.is-accent {
+  color: var(--accent);
+}
+.navbar-mobile-link.as-button {
+  font: inherit;
+}
+
+@media (max-width: 900px) {
+  .navbar-links,
+  .navbar-actions .navbar-link,
+  .navbar-actions .btn {
+    display: none;
+  }
+  .navbar-burger {
+    display: flex;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+  .navbar-inner {
+    gap: 1rem;
+  }
+}

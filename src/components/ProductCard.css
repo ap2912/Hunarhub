@@ -1,0 +1,95 @@
+.product-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.product-card:hover {
+  border-color: var(--border-strong);
+}
+
+.product-card-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.product-card-media .img-cover {
+  transition: transform 300ms ease;
+}
+.product-card:hover .product-card-media .img-cover {
+  transform: scale(1.04);
+}
+
+.product-card-stock {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background: rgba(5, 5, 5, 0.85);
+  border: 1px solid var(--border-strong);
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 0.35rem 0.6rem;
+  border-radius: 2px;
+}
+.product-card-stock.is-low {
+  color: var(--warning);
+  border-color: rgba(255, 193, 77, 0.5);
+}
+
+.product-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+.product-card-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.product-card-name a:hover {
+  color: var(--accent);
+}
+.product-card-maker {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.product-card-maker a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border-strong);
+}
+.product-card-maker a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+.product-card-loc {
+  color: var(--text-dim);
+}
+.product-card-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+.product-card-price {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}

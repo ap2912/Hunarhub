@@ -1,0 +1,78 @@
+.explore {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 clamp(4rem, 8vw, 8rem);
+}
+
+.explore-head {
+  margin-bottom: 2.5rem;
+}
+.explore-search {
+  margin-top: 2rem;
+  max-width: 720px;
+}
+
+.explore-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.explore-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.explore-count {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.explore-count strong {
+  color: var(--text);
+}
+
+.explore-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.explore-sort select {
+  width: auto;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.explore-section-title {
+  font-size: 1.1rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1.25rem;
+}
+.explore-section-title span {
+  color: var(--accent);
+}
+.explore-results section + section {
+  margin-top: 3.5rem;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .explore-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Project title** | HunarHub, Digital Marketplace for Local Micro-Entrepreneurs |
-| **Submitted by** | [Your Name] |
+| **Submitted by** | Aditya Panwar |
 | **Internship / Program** | Unified Mentor |
 | **GitHub repository** | https://github.com/ap2912/Hunarhub |
 | **Live deployment** | https://ap2912.github.io/Hunarhub/ |

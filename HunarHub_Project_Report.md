@@ -9,7 +9,7 @@
 | **Internship / Program** | Unified Mentor |
 | **GitHub repository** | https://github.com/ap2912/Hunarhub |
 | **Live deployment** | https://ap2912.github.io/Hunarhub/ |
-| **Date** | [Submission Date] |
+| **Date** | 05/10/2026 |
 
 ---
 
